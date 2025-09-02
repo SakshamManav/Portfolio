@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Typed from "typed.js";
 
 export default function TypedHeading() {
   const el = useRef(null);
@@ -29,9 +28,17 @@ export default function TypedHeading() {
       },
     };
 
-    typed.current = new Typed(el.current, options);
+    let mounted = true;
+    (async () => {
+      // dynamically import typed.js on the client
+      const typedModule = await import("typed.js");
+      const Typed = typedModule.default || typedModule;
+      if (!mounted) return;
+      typed.current = new Typed(el.current, options);
+    })();
 
     return () => {
+      mounted = false;
       if (typed.current) {
         typed.current.destroy();
         typed.current = null;
