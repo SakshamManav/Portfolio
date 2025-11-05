@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen ">
       <Navbar />
 
       {/* Hero Section */}
@@ -19,7 +19,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            {/* Left Column - Text Content */}
+            
             <div className="text-center lg:text-left">
               <TypedHeading />
               <p className="mt-12 text-l md:text-2xl text-gray-400 max-w-2xl mx-auto lg:mx-0">
@@ -35,7 +35,7 @@ export default function Home() {
                     <div className="text-center text-gray-400">
                      <div className="flex items-center justify-center w-full h-full">
                        <Image
-                         src="/images/profile3.png"
+                         src="/images/batman-photo.png"
                          alt="Profile Image"
                          fill
                          sizes="100vw"
@@ -45,15 +45,15 @@ export default function Home() {
                      </div>
                     </div>
                   </div>
-                  {/* Decorative elements */}
+                  {/* Decorative elements
                   <div className="absolute -top-3 -right-3 w-6 h-6 bg-white rounded-full opacity-20"></div>
-                  <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-gray-300 rounded-full opacity-30"></div>
+                  <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-gray-300 rounded-full opacity-30"></div> */}
                 </div>
               </div>
 
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
-                  href="/files/Saksham_Resume.pdf"
+                  href="/files/Sakshammanav.pdf"
                   download
                   className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium hover:bg-gray-200 hover:scale-105 transition-all duration-200 text-center"
                 >
@@ -73,7 +73,7 @@ export default function Home() {
                   <div className="text-center text-gray-400">
                     <div className="flex items-center justify-center w-full h-full">
                       <Image
-                        src="/images/profile3.png"
+                        src="/images/batman-photo.png"
                         alt="Profile Image"
                         fill
                         sizes="100vw"
@@ -84,8 +84,8 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full opacity-20"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gray-300 rounded-full opacity-30"></div>
+                {/* <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full opacity-20"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gray-300 rounded-full opacity-30"></div> */}
               </div>
             </div>
           </div>

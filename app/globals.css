@@ -20,7 +20,12 @@
 }
 
 body {
-  background: var(--background);
+  background-image: url('/images/main-backgnd.png');
+  background-color: #000; /* Fallback color */
+  background-attachment: fixed; /* This makes the background stay in place */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from tiling */
+  background-size: contain; /* Fit the entire image without cropping */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

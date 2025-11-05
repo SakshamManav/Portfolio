@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Projects() {
@@ -8,16 +8,27 @@ export default function Projects() {
       id: 1,
       title: "School Management System",
       description:
+        "Developed a full-featured Learning Management System (LMS) supporting separate roles for students and instructors. Implemented secure video streaming using Supabase signed URLs for limited-time access. The system enables course creation, enrollment management, and structured video sections, offering a seamless and role-based learning experience.",
+      technologies: ["Next.js", "Node.js", "Express", "SQL", "Supabase", "JWT"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/SakshamManav/eduKnow",
+      projectUrl: "/project/eduknow",
+      image: "/images/eduknow.png",
+    },
+    {
+      id: 2,
+      title: "School Management System",
+      description:
         "A comprehensive, full-stack school management platform engineered with Next.js, Node.js, and SQL. SchoolFlow provides a seamless, real-time ecosystem for Admins, Teachers, and Students, featuring three distinct portals to streamline all academic operations from attendance to fee management.",
       technologies: ["Next.js", "Node.js", "Express", "SQL", "JWT"],
-      liveUrl: "#",
+      liveUrl: "https://school-flow-a-real-time-educational.vercel.app",
       githubUrl:
         "https://github.com/SakshamManav/SchoolFlow-A-Real-Time-Educational-Operations-Platform",
       projectUrl: "/project/school-management",
       image: "/images/fee-management.png",
     },
     {
-      id: 2,
+      id: 3,
       title: "Instagram Clone",
       description:
         "Built an Instagram Clone using the MERN stack with real-time messaging, authentication, and post-sharing features. Users can create posts, follow others, and chat in real-time.",
@@ -29,17 +40,28 @@ export default function Projects() {
         "Socket.io",
         "JWT",
       ],
-      liveUrl: "https://instagram-clone-mocha-zeta.vercel.app/",
+      liveUrl: "#",
       githubUrl: "https://github.com/SakshamManav/Instagram-Clone",
       projectUrl: "/project/insta-clone",
       image: "/images/instagram-clone.png",
     },
     {
-      id: 3,
+      id: 4,
+      title: "File Synchronization",
+      description:
+        "Developed a fast, secure, browser-based solution for transferring files and messages between a laptop and a mobile device. The application uses QR code synchronization to establish an instant, temporary session, allowing users to upload and download data immediately without login or software installation.",
+      technologies: ["HTML", "CSS", "JS", "Node.js", "Express"],
+      liveUrl: "https://file-synchronization-client.vercel.app/",
+      githubUrl: "https://github.com/SakshamManav/File-Synchronization",
+      projectUrl: "/project/file-synchronization",
+      image: "/images/file-synchronization.png",
+    },
+    {
+      id: 5,
       title: "Background Remover",
       description:
-        "Created a background remover tool with a sleek UI. Users can upload images and remove backgrounds seamlessly using advanced AI algorithms for clean results.",
-      technologies: ["React", "API",],
+        "Created a background remover tool with a sleek UI. Users can upload images and remove backgrounds seamlessly.",
+      technologies: ["React", "Chatgpt"],
       liveUrl: "#",
       githubUrl: "https://github.com/SakshamManav/Background-Remover",
       projectUrl: "/project/bg-remover",
@@ -48,7 +70,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-black">
+    <section id="projects" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -68,16 +90,24 @@ export default function Projects() {
             >
               {/* Project Image */}
               <div className="h-48 bg-gray-800 overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={600}
+                  height={192}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
+                    e.target.style.display = "none";
+                    if (e.target.nextSibling)
+                      e.target.nextSibling.style.display = "flex";
                   }}
+                  priority={project.id === 1}
+                  unoptimized={project.liveUrl === "#"}
                 />
-                <div className="w-full h-full bg-gray-800 flex items-center justify-center" style={{display: 'none'}}>
+                <div
+                  className="w-full h-full bg-gray-800 flex items-center justify-center"
+                  style={{ display: "none" }}
+                >
                   <div className="text-center text-gray-400">
                     <svg
                       className="w-16 h-16 mx-auto mb-2"
@@ -131,7 +161,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       className="flex-1 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium text-center hover:bg-gray-200 transition-colors"
                     >
-                      Live Demo
+                      Live 
                     </a>
                   )}
                   <a

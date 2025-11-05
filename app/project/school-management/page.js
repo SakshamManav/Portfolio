@@ -23,7 +23,7 @@ export default function SchoolManagement() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen  text-white">
       <div className="container mx-auto px-4 py-12 pt-24">
         {/* Header */}
         <div className="text-center mb-12">
@@ -60,13 +60,13 @@ export default function SchoolManagement() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button
-            disabled
+          <a
+            href="https://school-flow-a-real-time-educational.vercel.app"
             className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-green-500 text-white px-8 py-3 rounded-full font-medium opacity-70 cursor-not-allowed"
           >
             <FaExternalLinkAlt />
             Live Demo
-          </button>
+          </a>
           <a
             href="https://github.com/SakshamManav/SchoolFlow-A-Real-Time-Educational-Operations-Platform"
             className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-all duration-200"

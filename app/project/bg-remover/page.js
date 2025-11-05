@@ -7,7 +7,7 @@ export default function BackgroundRemover() {
   const techStack = ["React.js", "HTML", "CSS", "JavaScript", "AI API"];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen  text-white">
       <div className="container mx-auto px-4 py-12 pt-24">
         
         {/* Header */}
