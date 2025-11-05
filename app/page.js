@@ -30,12 +30,12 @@ export default function Home() {
               {/* Mobile Image - Only visible on mobile */}
               <div className="mt-8 lg:hidden flex justify-center">
                 <div className="relative w-64 h-64 sm:w-72 sm:h-72">
-                  <div className="absolute inset-0 bg-gray-700 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black rounded-2xl shadow-2xl flex items-center justify-center">
                     {/* Placeholder for photo - replace with your actual image */}
                     <div className="text-center text-gray-400">
                      <div className="flex items-center justify-center w-full h-full">
                        <Image
-                         src="/images/batman-photo.png"
+                         src="/images/batman-logo1.png"
                          alt="Profile Image"
                          fill
                          sizes="100vw"
@@ -68,12 +68,12 @@ export default function Home() {
             {/* Right Column - Photo (hidden on mobile) */}
             <div className="hidden lg:flex justify-center lg:justify-end">
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-gray-700 rounded-2xl shadow-2xl flex items-center justify-center">
+                <div className="absolute inset-0 bg-black rounded-2xl shadow-2xl flex items-center justify-center">
                   {/* Placeholder for photo - replace with your actual image */}
                   <div className="text-center text-gray-400">
                     <div className="flex items-center justify-center w-full h-full">
                       <Image
-                        src="/images/batman-photo.png"
+                        src="/images/batman-logo1.png"
                         alt="Profile Image"
                         fill
                         sizes="100vw"
@@ -92,15 +92,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
       <About />
 
-      {/* Skills Section */}
       <Skills />
 
-      {/* Projects Section */}
       <Projects />
-      {/* Contact Section */}
+
       <Contact />
     </div>
   );
